@@ -7,10 +7,9 @@
 <% end %>
 
 <%= content_tag :div,
-  id: "hello-react",
+  id: "collections-react",
   data: {
-    name: 'Person',
-    products: @products,
+    collections: @custom_collections,
     shop_session: @shop_session
 }.to_json do %>
 <% end %>

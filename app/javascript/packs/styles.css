@@ -1,0 +1,36 @@
+
+.listContainer {
+    display: "block";
+    width: 100%;
+    height: 600px;
+    white-space: nowrap;
+    border: 0;
+    background-color: transparent;
+    overflow: auto;
+}
+  
+.productItem {
+    width: 300px;
+    float: left;
+    padding: 8px;
+    background: transparent;
+    border: 0;
+    user-select: none;
+}
+  
+.sectionLink, .sectionLink:active, .sectionLink:link {
+    text-decoration: none;
+    color: #212b36;
+    display: flex;
+
+}
+
+.collectionImage {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.sectionHeading {
+    display: flex;
+}
