@@ -67,3 +67,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'monorail', source: 'https://packages.shopify.io/shopify/gems'
 #gem 'kafka-shopify', source: 'https://packages.shopify.io/shopify/gems'
 gem 'shopify_app'
+gem 'webpacker'
+gem 'react-rails'
