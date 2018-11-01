@@ -13,6 +13,30 @@
   <% end %>
 </ul>
 
+<h2>Collections</h2>
+
+<ul>
+  <% @collections.each do |collection| %>
+    <li><%= link_to collection.collection_id, "https://#{@shop_session.url}/admin/collections/#{collection.collection_id}", target: "_top" %></li>
+  <% end %>
+</ul>
+
+<h2>Custome Collections</h2>
+
+<ul>
+  <% @custom_collections.each do |collection| %>
+    <li><%= link_to collection.title, "https://#{@shop_session.url}/admin/collections/#{collection.id}", target: "_top" %></li>
+  <% end %>
+</ul>
+
+<h2>Smart Collections</h2>
+
+<ul>
+  <% @smart_collections.each do |collection| %>
+    <li><%= link_to collection.title, "https://#{@shop_session.url}/admin/collections/#{collection.id}", target: "_top" %></li>
+  <% end %>
+</ul>
+
 <hr>
 
 <h2>Webhooks</h2>
