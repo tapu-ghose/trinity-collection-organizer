@@ -7,6 +7,7 @@
     border: 0;
     background-color: transparent;
     overflow: auto;
+    margin-top: 30px;
 }
   
 .productItem {
@@ -17,13 +18,6 @@
     border: 0;
     user-select: none;
 }
-  
-.sectionLink, .sectionLink:active, .sectionLink:link {
-    text-decoration: none;
-    color: #212b36;
-    display: flex;
-
-}
 
 .collectionImage {
     width: 30px;
@@ -32,5 +26,11 @@
 }
 
 .sectionHeading {
+    cursor: pointer;
     display: flex;
+}
+
+.gridContainer {
+    margin-top: 30px;
+    margin-left: 20px;
 }
