@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { Page, Card, Button, Thumbnail, AppProvider, PageActions, Heading } from '@shopify/polaris';
+import { Page, Card, Button, Thumbnail, AppProvider, PageActions, Heading, ButtonGroup } from '@shopify/polaris';
 import APIService from '../packs/api';
 import Grid from './Grid';
 
 class Sections extends Component {
     constructor(props) {
         super(props);
-        console.log('props', props);
+        // console.log('props', props);
         this.state = {
             collection: null
         };
@@ -39,7 +39,10 @@ class Sections extends Component {
     renderProducts() {
         return (
             <div className="gridContainer">
-                <Button icon="arrowLeft" onClick={this.gotoCollections.bind(this)} className="gridContainerButton">Back</Button>
+                <ButtonGroup>
+                    <Button icon="arrowLeft" onClick={this.gotoCollections.bind(this)} className="gridContainerButton">Back</Button>
+                    <Button primary onClick={this.gotoCollections.bind(this)}>Save</Button>
+                </ButtonGroup>
                 <Grid items={this.state.collection.products} />
             </div>
 
@@ -58,27 +61,3 @@ class Sections extends Component {
 }
 
 export default Sections;
-
-
-{/* <Page title="Collections">
-
-{props.collections.map((collection, index) => (
-    <Card key={index}
-        // title={collection.title}
-        // primaryFooterAction={{
-        //     content: 'View',
-        //     url: 'https://${shop_session.url}/admin/collection/${collection.id}',
-        // }}
-        sectioned
-    >
-
-        <div className="sectionHeading">
-            <a href={`https://${props.shop_session.url}/admin/collection/${collection.id}`} className="sectionLink">
-                <img src={collection.image.src} className="collectionImage" />
-                <Heading>{collection.title}</Heading>
-            </a>
-        </div>
-
-    </Card>
-))}
-</Page> */}

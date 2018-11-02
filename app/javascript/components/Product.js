@@ -1,16 +1,16 @@
 import React from "react";
-import { Card, Thumbnail } from "@shopify/polaris";
+import { Card, Thumbnail, Heading } from "@shopify/polaris";
 
 export default function Product(props) {
     const item = props.item;
     return (
         <div className="productItem">
-            <Card title={item.title} sectioned>
-                <Thumbnail
-                    source={item.image.src}
-                    size="large"
-                    alt={item.title}
-                />
+            <Card sectioned>
+                <div className="productContainer">
+                    <img src={item.image.src} className="productImage" />
+                    <p className="productDescription">{item.title}</p>
+                    {/* <Heading>{item.title}</Heading> */}
+                </div>
             </Card>
         </div>
     );

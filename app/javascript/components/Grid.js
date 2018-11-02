@@ -10,7 +10,7 @@ import Product from "./Product";
 class Grid extends Component {
   constructor(props) {
     super(props);
-    console.log('props2', props);
+    // console.log('props2', props);
     this.state = {
       items: props.items
     };
